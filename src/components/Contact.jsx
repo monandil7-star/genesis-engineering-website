@@ -269,13 +269,13 @@ function Contact() {
             </span>
 
             <p className="contact-address">
-              Gangtok, Sikkim
+              8H9W+RJ5, Upper Tadong, Tadong, Gangtok, Sikkim 737102
               <br />
               India
             </p>
 
             <a
-              href="https://www.google.com/maps/search/?api=1&query=Gangtok%2C%20Sikkim"
+              href="https://maps.app.goo.gl/wGKvkDCrm1Fv169P7?g_st=iw"
               target="_blank"
               rel="noopener noreferrer"
               className="contact-link"
