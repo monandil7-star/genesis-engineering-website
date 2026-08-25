@@ -4,15 +4,27 @@ function Navbar() {
   return (
     <header className="navbar">
 
-      {/* LOGO */}
-      <a href="#home" className="navbar-logo">
-        <div className="logo-main">
-          GENESIS
+      {/* BRAND */}
+      <a href="#home" className="navbar-brand">
+
+        <div className="navbar-logo-wrapper">
+          <img
+            src="/images/genesis-logo.jpeg"
+            alt="Genesis Engineering & Solutions"
+            className="navbar-logo-image"
+          />
         </div>
 
-        <div className="logo-sub">
-          ENGINEERING &amp; SOLUTIONS
+        <div className="navbar-brand-text">
+          <div className="navbar-brand-name">
+            GENESIS
+          </div>
+
+          <div className="navbar-brand-tagline">
+            ENGINEERING &amp; SOLUTIONS
+          </div>
         </div>
+
       </a>
 
       {/* NAVIGATION */}

@@ -6,11 +6,20 @@
   position: relative;
 
   width: 100%;
-  height: calc(100vh - 92px);
-  min-height: 720px;
+
+  height: 100vh;
+
+  min-height: 700px;
+
   overflow: hidden;
+
   background: #17110b;
+
   color: white;
+
+  padding-top: 108px;
+
+  box-sizing: border-box;
 }
 
 

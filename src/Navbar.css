@@ -1,211 +1,351 @@
-/* =========================
+/* =========================================================
    NAVBAR
-========================= */
+   ========================================================= */
 
 .navbar {
-  width: 100%;
-  height: 90px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 108px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  padding: 0 5%;
+  padding: 0 5vw;
 
-  background: #0b0b0b;
+  background: rgba(8, 8, 8, 0.94);
 
-  border-bottom: 1px solid #242424;
+  border-bottom: 1px solid rgba(215, 168, 93, 0.18);
 
-  box-sizing: border-box;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 
-  position: relative;
   z-index: 1000;
 }
 
 
-/* =========================
-   LOGO
-========================= */
+/* =========================================================
+   BRAND
+   ========================================================= */
 
-.navbar-logo {
-  text-decoration: none;
-
+.navbar-brand {
   display: flex;
-  flex-direction: column;
-
-  justify-content: center;
-
-  cursor: pointer;
-}
-
-.logo-main {
-  color: #f5f2ed;
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: 40px;
-
-  font-weight: 700;
-
-  line-height: 1;
-
-  letter-spacing: 2px;
-}
-
-.logo-sub {
-  margin-top: 8px;
-
-  color: #d6a354;
-
-  font-size: 10px;
-
-  font-weight: 600;
-
-  letter-spacing: 4px;
-
-  line-height: 1;
-}
-
-
-/* =========================
-   NAVIGATION
-========================= */
-
-.navbar-links {
-  display: flex;
-
   align-items: center;
 
-  gap: 42px;
+  gap: 14px;
+
+  text-decoration: none;
 
   height: 100%;
 }
 
 
-/* =========================
-   NAV LINKS
-========================= */
+/* =========================================================
+   LOGO IMAGE
+
+   We intentionally crop the supplied square logo so that
+   only the GE/S emblem is visible.
+   ========================================================= */
+
+.navbar-logo-wrapper {
+  width: 75px;
+  height: 82px;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+.navbar-logo-image {
+  width: 150px;
+  height: 90px;
+  max-width: none;
+  object-fit: contain;
+
+  /*
+    Move the square logo upward so the GE/S emblem
+    is visible while the tiny original text is cropped.
+  */
+  transform: translateY(-4px);
+}
+
+
+/* =========================================================
+   BRAND TEXT
+   ========================================================= */
+
+.navbar-brand-text {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+  line-height: 1;
+}
+
+
+.navbar-brand-name {
+  color: #f4f0e9;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 18px;
+
+  font-weight: 600;
+
+  letter-spacing: 5px;
+
+  margin-bottom: 8px;
+}
+
+
+.navbar-brand-tagline {
+  color: #d7a85d;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 2.6px;
+
+  white-space: nowrap;
+
+  opacity: 0.95;
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+
+  gap: 42px;
+}
+
 
 .navbar-links a {
   position: relative;
 
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  height: 48px;
-
-  padding: 0 2px;
-
-  color: #f2f0ed;
+  color: rgba(255, 255, 255, 0.88);
 
   text-decoration: none;
 
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
 
-  font-size: 17px;
+  font-size: 15px;
 
   font-weight: 400;
 
-  white-space: nowrap;
+  transition:
+    color 0.3s ease;
+}
+
+
+/* GOLD UNDERLINE */
+
+.navbar-links a:not(.contact-button)::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -8px;
+
+  width: 0;
+  height: 1px;
+
+  background: #d7a85d;
 
   transition:
-    color 0.25s ease,
-    border-color 0.25s ease,
-    background-color 0.25s ease;
+    width 0.3s ease;
 }
 
 
-/* Hover */
-
-.navbar-links a:hover {
-  color: #d6a354;
+.navbar-links a:not(.contact-button):hover {
+  color: #d7a85d;
 }
 
 
-/* =========================
+.navbar-links a:not(.contact-button):hover::after {
+  width: 100%;
+}
+
+
+/* =========================================================
    CONTACT BUTTON
-========================= */
+   ========================================================= */
 
-.navbar-links .contact-button {
-  height: 54px;
+.contact-button {
+  display: inline-flex;
 
-  padding: 0 28px;
+  align-items: center;
+  justify-content: center;
 
-  border: 1px solid #555;
+  min-width: 112px;
+
+  padding: 13px 24px;
+
+  border: 1px solid rgba(215, 168, 93, 0.55);
 
   border-radius: 30px;
 
-  color: #f2f0ed;
-}
+  color: #f5f1e9 !important;
 
-.navbar-links .contact-button:hover {
-  color: #d6a354;
-
-  border-color: #d6a354;
-}
-
-
-/* =========================
-   ACTIVE NAVIGATION
-========================= */
-
-.navbar-links a.active {
-  border: 1px solid #f2f0ed;
-
-  border-radius: 4px;
-
-  padding: 0 6px;
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
 }
 
 
-/* =========================
-   MOBILE
-========================= */
+.contact-button:hover {
+  background: #d7a85d;
 
-@media (max-width: 900px) {
+  border-color: #d7a85d;
+
+  color: #111 !important;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
 
   .navbar {
-    height: auto;
+    height: 96px;
 
-    min-height: 80px;
-
-    padding: 18px 5%;
-
-    flex-direction: column;
-
-    align-items: flex-start;
-
-    gap: 20px;
-  }
-
-  .logo-main {
-    font-size: 32px;
+    padding: 0 4vw;
   }
 
   .navbar-links {
-    width: 100%;
-
-    height: auto;
-
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 12px 25px;
+    gap: 25px;
   }
 
   .navbar-links a {
-    height: 40px;
-
-    font-size: 15px;
+    font-size: 14px;
   }
 
-  .navbar-links .contact-button {
-    height: 44px;
-
-    padding: 0 22px;
+  .navbar-brand-name {
+    font-size: 16px;
   }
-} 
+
+  .navbar-brand-tagline {
+    font-size: 8px;
+
+    letter-spacing: 2px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 750px) {
+
+  .navbar {
+    height: 82px;
+
+    padding: 0 20px;
+  }
+
+  .navbar-logo-wrapper {
+    width: 48px;
+    height: 58px;
+  }
+
+  .navbar-logo-image {
+    width: 86px;
+    height: 86px;
+  }
+
+  .navbar-brand {
+    gap: 9px;
+  }
+
+  .navbar-brand-name {
+    font-size: 14px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 6px;
+  }
+
+  .navbar-brand-tagline {
+    font-size: 7px;
+
+    letter-spacing: 1.5px;
+  }
+
+  .navbar-links {
+    gap: 0;
+  }
+
+  .navbar-links a:not(.contact-button) {
+    display: none;
+  }
+
+  .contact-button {
+    min-width: 88px;
+
+    padding: 10px 18px;
+
+    font-size: 13px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 430px) {
+
+  .navbar {
+    padding: 0 15px;
+  }
+
+  .navbar-brand-tagline {
+    font-size: 6px;
+
+    letter-spacing: 1.2px;
+  }
+
+  .navbar-brand-name {
+    font-size: 13px;
+  }
+
+  .contact-button {
+    min-width: 78px;
+
+    padding: 9px 14px;
+  }
+
+}

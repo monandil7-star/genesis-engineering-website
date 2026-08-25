@@ -6,7 +6,7 @@ const websiteData = {
       "M.Tech in Structural Engineering, with a strong academic foundation in structural analysis, design, and engineering practices.",
     experience:
      "With over 9 years of professional experience in structural engineering and infrastructure development, she has contributed to a diverse range of projects spanning buildings, roads, bridges, and tunnels. Her approach combines technical expertise, practical engineering judgment, and a strong commitment to structural safety, quality, and long-term performance.",
-    imageUrl: "/images/founder.png",
+    imageUrl: "/images/founder.jpeg",
   },
 
   about: {
