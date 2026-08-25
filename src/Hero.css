@@ -6,13 +6,11 @@
   position: relative;
 
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 92px);
   min-height: 720px;
-
   overflow: hidden;
-
-  background: #0b0805;
-  color: #fff;
+  background: #17110b;
+  color: white;
 }
 
 
@@ -110,15 +108,24 @@
 
 .hero-content {
   position: relative;
-
   z-index: 3;
 
   width: min(1200px, 90%);
-
+  height: 100%;
   margin: 0 auto;
 
-  padding-top: clamp(150px, 22vh, 220px);
-  padding-left: 3vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  /*
+     Reserve space for the bottom statistics bar.
+     This prevents the description/button from
+     disappearing underneath it.
+  */
+  padding: 0 4vw 130px;
+
+  box-sizing: border-box;
 }
 
 
@@ -521,6 +528,20 @@
       100px
     );
   }
+  .hero h1 {
+  margin: 0;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: clamp(64px, 7vw, 108px);
+
+  font-weight: 500;
+  line-height: 0.9;
+  letter-spacing: -4px;
+}
 
   .hero-description {
     width: 500px;
@@ -589,13 +610,63 @@
 
     max-width: 440px;
 
-    margin-top: 30px;
+    margin-top: 35px;
 
     font-size: 15px;
 
     line-height: 1.65;
   }
 
+  .hero-explore {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-top: 32px;
+
+  padding: 18px 24px 18px 28px;
+
+  min-width: 255px;
+
+  border: none;
+  border-radius: 40px;
+
+  background: #f4f0e9;
+  color: #17120d;
+
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.hero-explore strong {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+
+  border-radius: 50%;
+
+  background: #d7a85d;
+  color: #111;
+
+  font-size: 18px;
+}
+
+.hero-explore:hover {
+  transform: translateY(-3px);
+  background: white;
+}
   .hero-actions {
     flex-direction: column;
 
