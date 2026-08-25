@@ -1,0 +1,288 @@
+/* =========================================
+   SERVICES
+========================================= */
+
+.services-section {
+  width: 100%;
+
+  background: #f3f0e9;
+
+  color: #171717;
+
+  padding: 120px 0;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.services-container {
+  width: min(1200px, 88%);
+
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.services-header {
+  max-width: 720px;
+
+  margin-bottom: 70px;
+}
+
+.services-eyebrow {
+  display: block;
+
+  margin-bottom: 20px;
+
+  color: #a87532;
+
+  font-size: 12px;
+
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+}
+
+.services-header h2 {
+  margin: 0 0 25px;
+
+  font-size: clamp(48px, 6vw, 78px);
+
+  line-height: 0.95;
+
+  font-weight: 400;
+
+  letter-spacing: -3px;
+}
+
+.services-header p {
+  max-width: 600px;
+
+  margin: 0;
+
+  color: #666;
+
+  font-size: 17px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   SERVICES LIST
+========================================= */
+
+.services-list {
+  border-top: 1px solid #d2cec5;
+}
+
+
+/* =========================================
+   SERVICE ITEM
+========================================= */
+
+.service-item {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    45px 1fr 50px;
+
+  align-items: center;
+
+  gap: 30px;
+
+  min-height: 145px;
+
+  padding: 25px 0;
+
+  border-bottom: 1px solid #d2cec5;
+
+  transition:
+    padding-left 0.3s ease,
+    background 0.3s ease;
+}
+
+
+/* =========================================
+   LEFT TICK
+========================================= */
+
+.service-check {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #a87532;
+
+  border-radius: 50%;
+
+  color: #a87532;
+
+  font-size: 16px;
+
+  font-weight: 500;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.service-content {
+  position: relative;
+}
+
+.service-number {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #a87532;
+
+  font-size: 11px;
+
+  letter-spacing: 2px;
+}
+
+.service-content h3 {
+  margin: 0 0 8px;
+
+  font-size: 27px;
+
+  font-weight: 500;
+
+  letter-spacing: -0.5px;
+}
+
+.service-content p {
+  max-width: 700px;
+
+  margin: 0;
+
+  color: #777;
+
+  font-size: 15px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   ARROW
+========================================= */
+
+.service-arrow {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #c5c0b6;
+
+  border-radius: 50%;
+
+  font-size: 19px;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.service-item:hover {
+  padding-left: 12px;
+}
+
+.service-item:hover .service-check {
+  background: #a87532;
+
+  color: white;
+}
+
+.service-item:hover .service-arrow {
+  background: #a87532;
+
+  color: white;
+
+  border-color: #a87532;
+
+  transform: rotate(45deg);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .services-section {
+    padding: 80px 0;
+  }
+
+  .services-container {
+    width: 88%;
+  }
+
+  .services-header {
+    margin-bottom: 50px;
+  }
+
+  .services-header h2 {
+    font-size: 50px;
+  }
+
+  .service-item {
+    grid-template-columns:
+      35px 1fr 35px;
+
+    gap: 15px;
+
+    min-height: 130px;
+  }
+
+  .service-check {
+    width: 28px;
+    height: 28px;
+
+    font-size: 14px;
+  }
+
+  .service-content h3 {
+    font-size: 21px;
+  }
+
+  .service-content p {
+    font-size: 14px;
+  }
+
+  .service-arrow {
+    width: 34px;
+    height: 34px;
+  }
+
+}

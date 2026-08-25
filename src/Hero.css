@@ -1,0 +1,656 @@
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+  position: relative;
+
+  width: 100%;
+  height: 100vh;
+  min-height: 720px;
+
+  overflow: hidden;
+
+  background: #0b0805;
+  color: #fff;
+}
+
+
+/* =========================================================
+   BACKGROUND SLIDES
+========================================================= */
+
+.hero-background {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-size: cover;
+  background-position: center;
+
+  opacity: 0;
+
+  transform: scale(1.08);
+
+  transition:
+    opacity 2s ease-in-out,
+    transform 8s cubic-bezier(0.2, 0.6, 0.2, 1);
+
+  z-index: 0;
+}
+
+.hero-background.active {
+  opacity: 1;
+
+  transform: scale(1);
+}
+
+
+/* =========================================================
+   PREMIUM OVERLAY
+========================================================= */
+
+.hero-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(7, 5, 3, 0.92) 0%,
+      rgba(7, 5, 3, 0.78) 28%,
+      rgba(7, 5, 3, 0.48) 58%,
+      rgba(7, 5, 3, 0.42) 100%
+    );
+}
+
+.hero-overlay::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.15) 0%,
+      transparent 45%,
+      rgba(0, 0, 0, 0.72) 100%
+    );
+}
+
+.hero-overlay::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at 75% 45%,
+      rgba(215, 168, 93, 0.08),
+      transparent 35%
+    );
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero-content {
+  position: relative;
+
+  z-index: 3;
+
+  width: min(1200px, 90%);
+
+  margin: 0 auto;
+
+  padding-top: clamp(150px, 22vh, 220px);
+  padding-left: 3vw;
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.hero-eyebrow {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin-bottom: 35px;
+
+  color: #d7a85d;
+
+  font-size: 10px;
+
+  font-weight: 500;
+
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+}
+
+.hero-eyebrow span {
+  display: block;
+
+  width: 42px;
+
+  height: 1px;
+
+  background: #d7a85d;
+}
+
+.hero-eyebrow span:last-child {
+  display: none;
+}
+
+
+/* =========================================================
+   MAIN HEADING
+========================================================= */
+
+.hero h1 {
+  margin: 0;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: clamp(
+    72px,
+    9vw,
+    128px
+  );
+
+  font-weight: 400;
+
+  line-height: 0.86;
+
+  letter-spacing: -6px;
+
+  text-shadow:
+    0 3px 25px rgba(0, 0, 0, 0.25);
+}
+
+.hero-white {
+  color: #f7f4ef;
+}
+
+.hero-gold {
+  color: #d7a85d;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.hero-description {
+  width: 520px;
+
+  max-width: 90%;
+
+  margin-top: 42px;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  font-size: 17px;
+
+  line-height: 1.75;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.hero-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 28px;
+
+  margin-top: 38px;
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+========================================================= */
+
+.hero-explore {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 28px;
+
+  min-width: 245px;
+
+  padding: 14px 18px 14px 25px;
+
+  border: none;
+
+  border-radius: 50px;
+
+  background: #f4f0e9;
+
+  color: #17120d;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.hero-explore strong {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 34px;
+  height: 34px;
+
+  border-radius: 50%;
+
+  background: #d7a85d;
+
+  color: #111;
+
+  font-size: 18px;
+
+  transition:
+    transform 0.3s ease;
+}
+
+.hero-explore:hover {
+  transform: translateY(-3px);
+
+  background: #fff;
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.25);
+}
+
+.hero-explore:hover strong {
+  transform: translateX(3px);
+}
+
+
+/* =========================================================
+   SECONDARY CONTACT BUTTON
+========================================================= */
+
+.hero-contact {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  padding: 14px 0;
+
+  color: #f5f2ec;
+
+  border-bottom: 1px solid #d7a85d;
+
+  text-decoration: none;
+
+  font-size: 10px;
+
+  letter-spacing: 2.5px;
+
+  transition:
+    gap 0.3s ease,
+    color 0.3s ease;
+}
+
+.hero-contact span {
+  color: #d7a85d;
+
+  font-size: 16px;
+}
+
+.hero-contact:hover {
+  gap: 27px;
+
+  color: #fff;
+}
+
+
+/* =========================================================
+   SLIDER INDICATORS
+========================================================= */
+
+.hero-indicators {
+  position: absolute;
+
+  z-index: 5;
+
+  right: 48px;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 11px;
+}
+
+.hero-indicators button {
+  width: 5px;
+
+  height: 5px;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.35);
+
+  cursor: pointer;
+
+  transition:
+    height 0.3s ease,
+    background 0.3s ease;
+}
+
+.hero-indicators button.active {
+  height: 34px;
+
+  border-radius: 10px;
+
+  background: #d7a85d;
+}
+
+
+/* =========================================================
+   BOTTOM INFORMATION BAR
+========================================================= */
+
+.hero-stats {
+  position: absolute;
+
+  z-index: 4;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  min-height: 105px;
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 0 5vw;
+
+  background:
+    rgba(8, 8, 8, 0.72);
+
+  border-top:
+    1px solid rgba(255, 255, 255, 0.14);
+
+  backdrop-filter: blur(10px);
+}
+
+.hero-stat {
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  min-width: 190px;
+}
+
+.hero-stat strong {
+  color: #f5f1e9;
+
+  font-size: 26px;
+
+  font-weight: 500;
+
+  letter-spacing: -0.5px;
+}
+
+.hero-stat span {
+  color: rgba(255, 255, 255, 0.48);
+
+  font-size: 9px;
+
+  line-height: 1.5;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+.hero-stat-divider {
+  width: 1px;
+
+  height: 38px;
+
+  margin: 0 35px;
+
+  background:
+    rgba(215, 168, 93, 0.35);
+}
+
+
+/* =========================================================
+   SCROLL INDICATOR
+========================================================= */
+
+.hero-scroll {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-left: auto;
+
+  color: rgba(255, 255, 255, 0.4);
+
+  font-size: 8px;
+
+  letter-spacing: 3px;
+}
+
+.hero-scroll span {
+  color: #d7a85d;
+
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .hero-content {
+    padding-left: 0;
+
+    padding-top: 21vh;
+  }
+
+  .hero h1 {
+    font-size: clamp(
+      60px,
+      10vw,
+      100px
+    );
+  }
+
+  .hero-description {
+    width: 500px;
+  }
+
+  .hero-indicators {
+    right: 25px;
+  }
+
+  .hero-stat {
+    min-width: auto;
+  }
+
+  .hero-stat-divider {
+    margin: 0 20px;
+  }
+
+  .hero-scroll {
+    display: none;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .hero {
+    height: 760px;
+
+    min-height: 760px;
+  }
+
+  .hero-content {
+    width: 90%;
+
+    padding-top: 145px;
+  }
+
+  .hero-eyebrow {
+    margin-bottom: 28px;
+
+    font-size: 9px;
+
+    letter-spacing: 2.5px;
+
+    gap: 10px;
+  }
+
+  .hero-eyebrow span {
+    width: 25px;
+  }
+
+  .hero h1 {
+    font-size: 58px;
+
+    letter-spacing: -3px;
+
+    line-height: 0.9;
+  }
+
+  .hero-description {
+    width: 100%;
+
+    max-width: 440px;
+
+    margin-top: 30px;
+
+    font-size: 15px;
+
+    line-height: 1.65;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 20px;
+
+    margin-top: 30px;
+  }
+
+  .hero-explore {
+    min-width: 220px;
+  }
+
+  .hero-indicators {
+    display: none;
+  }
+
+  .hero-stats {
+    min-height: 105px;
+
+    gap: 0;
+
+    padding: 0 20px;
+
+    overflow: hidden;
+  }
+
+  .hero-stat {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    min-width: 0;
+
+    flex: 1;
+  }
+
+  .hero-stat strong {
+    font-size: 20px;
+  }
+
+  .hero-stat span {
+    font-size: 7px;
+
+    letter-spacing: 1.5px;
+  }
+
+  .hero-stat-divider {
+    height: 35px;
+
+    margin: 0 14px;
+  }
+}

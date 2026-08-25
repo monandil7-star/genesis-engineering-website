@@ -1,0 +1,454 @@
+/* =========================================
+   FOUNDER PAGE
+========================================= */
+
+.founder-page {
+  width: 100%;
+  min-height: calc(100vh - 100px);
+
+  background: #080808;
+  color: #f5f2ec;
+
+  padding: 90px 0 110px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   MAIN LAYOUT
+========================================= */
+
+.founder-container {
+  width: min(1400px, 88%);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 560px minmax(0, 1fr);
+
+  column-gap: 110px;
+
+  align-items: center;
+}
+
+
+/* =========================================
+   IMAGE SECTION
+========================================= */
+
+.founder-image-section {
+  position: relative;
+
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+}
+
+
+/* =========================================
+   IMAGE FRAME
+========================================= */
+
+.founder-image-wrapper {
+  position: relative;
+
+  width: 100%;
+  max-width: 560px;
+
+  aspect-ratio: 4 / 5;
+
+  background: #111;
+
+  overflow: visible;
+
+  border: 1px solid rgba(200, 148, 62, 0.8);
+
+  box-sizing: border-box;
+}
+
+
+/*
+   SECOND DECORATIVE OFFSET FRAME
+   This is intentionally created using
+   box-shadow instead of ::before / ::after.
+*/
+
+.founder-image-wrapper {
+  box-shadow:
+    18px 18px 0 -1px #080808,
+    18px 18px 0 0 rgba(200, 148, 62, 0.55);
+}
+
+
+/* =========================================
+   FOUNDER IMAGE
+========================================= */
+
+.founder-image {
+  position: absolute;
+
+  top: 16px;
+  left: 16px;
+
+  width: calc(100% - 32px);
+  height: calc(100% - 32px);
+
+  display: block;
+
+  object-fit: cover;
+
+  /*
+     This keeps the founder positioned
+     naturally without stretching.
+  */
+  object-position: center center;
+
+  background: #151515;
+}
+
+
+/* =========================================
+   IMAGE LABEL
+========================================= */
+
+.founder-image-label {
+  position: absolute;
+
+  left: 32px;
+  bottom: 32px;
+
+  z-index: 5;
+
+  display: flex;
+  align-items: center;
+
+  gap: 16px;
+
+  padding: 15px 22px;
+
+  background: rgba(8, 8, 8, 0.92);
+
+  border-left: 2px solid #c8943e;
+
+  color: #f5f2ec;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  letter-spacing: 4px;
+
+  white-space: nowrap;
+
+  box-sizing: border-box;
+}
+
+
+.founder-image-number {
+  color: #c8943e;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  letter-spacing: 2px;
+}
+
+
+/* =========================================
+   RIGHT CONTENT
+========================================= */
+
+.founder-content {
+  width: 100%;
+  max-width: 720px;
+}
+
+
+.founder-label {
+  display: block;
+
+  margin-bottom: 30px;
+
+  color: #c8943e;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  letter-spacing: 5px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================
+   MAIN HEADING
+========================================= */
+
+.founder-content h1 {
+  margin: 0;
+
+  color: #f5f2ec;
+
+  font-size: clamp(48px, 5vw, 76px);
+
+  line-height: 0.98;
+
+  font-weight: 400;
+
+  letter-spacing: -3px;
+}
+
+
+.founder-content h1 span {
+  color: #c8943e;
+}
+
+
+/* =========================================
+   GOLD DIVIDER
+========================================= */
+
+.founder-line {
+  width: 105px;
+  height: 1px;
+
+  background: #c8943e;
+
+  margin: 55px 0 45px;
+}
+
+
+/* =========================================
+   NAME
+========================================= */
+
+.founder-content h2 {
+  margin: 0 0 10px;
+
+  color: #f5f2ec;
+
+  font-size: 30px;
+
+  line-height: 1.2;
+
+  font-weight: 500;
+
+  letter-spacing: -0.5px;
+}
+
+
+/* =========================================
+   DESIGNATION
+========================================= */
+
+.founder-content h3 {
+  margin: 0 0 42px;
+
+  color: #c8943e;
+
+  font-size: 19px;
+
+  font-weight: 400;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.founder-content p {
+  margin: 0;
+
+  color: #c9c9c9;
+
+  font-size: 17px;
+
+  line-height: 1.85;
+
+  max-width: 700px;
+}
+
+
+.founder-experience {
+  margin-top: 28px !important;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .founder-container {
+    width: 88%;
+
+    grid-template-columns: 440px minmax(0, 1fr);
+
+    column-gap: 70px;
+  }
+
+
+  .founder-content h1 {
+    font-size: 55px;
+
+    letter-spacing: -2px;
+  }
+
+
+  .founder-content p {
+    font-size: 16px;
+  }
+
+
+  .founder-image-label {
+    left: 26px;
+    bottom: 26px;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 800px) {
+
+  .founder-page {
+    padding: 70px 0 90px;
+  }
+
+
+  .founder-container {
+    width: 88%;
+
+    grid-template-columns: 1fr;
+
+    row-gap: 70px;
+  }
+
+
+  .founder-image-section {
+    width: 100%;
+  }
+
+
+  .founder-image-wrapper {
+    width: min(100%, 500px);
+
+    margin: 0 auto;
+  }
+
+
+  .founder-image-label {
+    left: 25px;
+    bottom: 25px;
+
+    padding: 13px 16px;
+
+    gap: 10px;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+  }
+
+
+  .founder-content {
+    max-width: 100%;
+  }
+
+
+  .founder-label {
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 25px;
+  }
+
+
+  .founder-content h1 {
+    font-size: 46px;
+
+    line-height: 1;
+
+    letter-spacing: -2px;
+  }
+
+
+  .founder-line {
+    margin: 40px 0;
+  }
+
+
+  .founder-content h2 {
+    font-size: 25px;
+  }
+
+
+  .founder-content h3 {
+    font-size: 17px;
+
+    margin-bottom: 35px;
+  }
+
+
+  .founder-content p {
+    font-size: 16px;
+
+    line-height: 1.75;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .founder-page {
+    padding: 55px 0 70px;
+  }
+
+
+  .founder-container {
+    width: 90%;
+  }
+
+
+  .founder-image-wrapper {
+    aspect-ratio: 4 / 5;
+  }
+
+
+  .founder-image {
+    top: 10px;
+    left: 10px;
+
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+  }
+
+
+  .founder-image-label {
+    left: 18px;
+    bottom: 18px;
+
+    padding: 11px 13px;
+
+    letter-spacing: 1.5px;
+
+    font-size: 8px;
+  }
+
+
+  .founder-content h1 {
+    font-size: 39px;
+  }
+}

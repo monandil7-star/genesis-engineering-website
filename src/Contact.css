@@ -1,0 +1,407 @@
+/* ================================
+   CONTACT PAGE
+================================ */
+
+.contact-page {
+  background: #090909;
+  color: #f5f2ed;
+  min-height: 100vh;
+  padding-bottom: 100px;
+}
+
+
+/* ================================
+   HERO
+================================ */
+
+.contact-hero {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 110px 7% 70px;
+}
+
+.contact-hero-label {
+  color: #c99a52;
+  font-size: 13px;
+  letter-spacing: 5px;
+  margin-bottom: 25px;
+}
+
+.contact-hero h1 {
+  margin: 0;
+  font-size: clamp(60px, 8vw, 125px);
+  line-height: 0.95;
+  font-weight: 500;
+  letter-spacing: -5px;
+}
+
+.contact-hero h1 span {
+  color: #d4a65f;
+}
+
+
+/* ================================
+   MAIN CONTENT
+================================ */
+
+.contact-main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 7% 0;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.85fr);
+  gap: 90px;
+}
+
+
+/* ================================
+   FORM
+================================ */
+
+.contact-form-section {
+  width: 100%;
+}
+
+.contact-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-bottom: 28px;
+}
+
+.contact-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-field label {
+  color: #a88a60;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.contact-field input,
+.contact-field select,
+.contact-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+
+  background: transparent;
+  color: #f4f0ea;
+
+  border: 1px solid #343434;
+  border-radius: 4px;
+
+  padding: 18px;
+  font-size: 16px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.contact-field input,
+.contact-field select {
+  height: 60px;
+}
+
+.contact-field textarea {
+  min-height: 155px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.contact-field input::placeholder,
+.contact-field textarea::placeholder {
+  color: #777;
+}
+
+.contact-field select {
+  color: #f4f0ea;
+  appearance: auto;
+}
+
+.contact-field select option {
+  background: #111;
+  color: #fff;
+}
+
+.contact-field input:focus,
+.contact-field select:focus,
+.contact-field textarea:focus {
+  border-color: #c99a52;
+  background: #0d0d0d;
+}
+
+.contact-message-field {
+  margin-top: 2px;
+}
+
+
+/* ================================
+   BUTTON
+================================ */
+
+.contact-submit {
+  margin-top: 28px;
+
+  min-width: 255px;
+  height: 58px;
+
+  border: none;
+  border-radius: 30px;
+
+  background: #d2a45e;
+  color: #090909;
+
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.contact-submit:hover {
+  background: #e0b774;
+  transform: translateY(-2px);
+}
+
+.contact-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.contact-submit span {
+  font-size: 20px;
+}
+
+
+/* ================================
+   SUCCESS / ERROR
+================================ */
+
+.contact-error {
+  margin-top: 20px;
+  color: #e58d8d;
+  font-size: 14px;
+}
+
+.contact-success {
+  margin-top: 20px;
+  color: #9bcf9b;
+  font-size: 14px;
+}
+
+
+/* ================================
+   RIGHT SIDE INFORMATION
+================================ */
+
+.contact-info {
+  padding-top: 0;
+}
+
+.contact-info-block {
+  padding: 0 0 35px;
+}
+
+.contact-info-title {
+  display: block;
+
+  color: #a88a60;
+
+  font-size: 12px;
+  letter-spacing: 2px;
+
+  margin-bottom: 22px;
+}
+
+.contact-address {
+  margin: 0;
+
+  color: #e8e3dc;
+
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.contact-link {
+  display: inline-block;
+
+  margin-top: 22px;
+
+  color: #d2a45e;
+
+  font-size: 15px;
+  text-decoration: none;
+
+  border-bottom: 1px solid #70552e;
+  padding-bottom: 5px;
+}
+
+.contact-link:hover {
+  color: #e5bc7b;
+}
+
+
+/* ================================
+   DIVIDERS
+================================ */
+
+.contact-divider {
+  height: 1px;
+  background: #252525;
+  margin-bottom: 35px;
+}
+
+
+/* ================================
+   SOCIAL LINKS
+================================ */
+
+.contact-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  max-width: 280px;
+
+  color: #e8e3dc;
+
+  font-size: 17px;
+
+  text-decoration: none;
+
+  margin-bottom: 22px;
+
+  transition: color 0.2s ease;
+}
+
+.contact-social-link span {
+  color: #d2a45e;
+  font-size: 18px;
+}
+
+.contact-social-link:hover {
+  color: #d2a45e;
+}
+
+
+/* ================================
+   BUSINESS HOURS
+================================ */
+
+.business-hours {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.business-hours > div {
+  display: grid;
+  grid-template-columns: 1fr 130px;
+
+  color: #ded9d1;
+
+  font-size: 16px;
+}
+
+.business-hours > div span:last-child {
+  text-align: right;
+  color: #bcb6ae;
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 900px) {
+
+  .contact-hero {
+    padding: 80px 6% 55px;
+  }
+
+  .contact-main {
+    padding: 20px 6% 0;
+
+    grid-template-columns: 1fr;
+
+    gap: 70px;
+  }
+
+  .contact-info {
+    max-width: 650px;
+  }
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+
+  .contact-page {
+    padding-bottom: 60px;
+  }
+
+  .contact-hero {
+    padding: 65px 6% 45px;
+  }
+
+  .contact-hero-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+  }
+
+  .contact-hero h1 {
+    font-size: 58px;
+    letter-spacing: -3px;
+  }
+
+  .contact-main {
+    padding: 15px 6% 0;
+  }
+
+  .contact-form-row {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+
+  .contact-field input,
+  .contact-field select {
+    height: 56px;
+  }
+
+  .contact-field textarea {
+    min-height: 140px;
+  }
+
+  .contact-submit {
+    width: 100%;
+  }
+
+  .contact-address {
+    font-size: 17px;
+  }
+
+  .business-hours > div {
+    grid-template-columns: 1fr auto;
+  }
+}
