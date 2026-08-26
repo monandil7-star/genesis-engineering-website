@@ -9,7 +9,7 @@ function Navbar() {
 
         <div className="navbar-logo-wrapper">
           <img
-            src="/images/genesis-logo.jpeg"
+            src="/images/genesis-logo.png"
             alt="Genesis Engineering & Solutions"
             className="navbar-logo-image"
           />
