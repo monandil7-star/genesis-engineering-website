@@ -50,7 +50,7 @@ function FounderVideo() {
               playsInline
             >
               <source
-                src="/videos/founder-introduction.mp4"
+                src="/videos/founder-introduction-compressed.mp4"
                 type="video/mp4"
               />
 
